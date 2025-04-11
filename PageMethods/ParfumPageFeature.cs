@@ -45,7 +45,7 @@ namespace de.douglas.automation.PageMethods
 
         public void SelectOptionFromDropdown(string dropdownName, string valueToSelect)
         {
-            Thread.Sleep(5000);
+            _utils.WaitForFewSeconds(5);
             if (_utils.GetElements(ParfumPage.MoreFiltersButton).Any())
             {
                 _utils.ClickUsingJavascript(ParfumPage.MoreFiltersButton);
@@ -75,7 +75,6 @@ namespace de.douglas.automation.PageMethods
             List<string> products = new List<string>();
 
             _utils.ScrollToFooter();
-            _utils.WaitForFewSeconds(5);
 
             var elements = _utils.GetElements(ParfumPage.ProductInfoAllCards);
             foreach (var element in elements)

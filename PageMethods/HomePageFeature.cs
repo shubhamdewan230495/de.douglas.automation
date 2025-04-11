@@ -14,7 +14,6 @@ namespace de.douglas.automation.PageMethods
         }
         public void ClickAllowAllOnConsentModal()
         {  
-            Thread.Sleep(5000);
             var shadowRoot = ConsentFormModal.GetShadowRoot();
             var allowAllButton = shadowRoot.FindElement(CookieConsentAllowAllButton);
             allowAllButton.Click();
